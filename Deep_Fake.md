@@ -64,25 +64,55 @@ https://git-scm.com/downloads
 
 ![image](https://github.com/FurkanGozukara/Stable-Diffusion/assets/19240467/3a635a3b-f606-4ff6-8f5f-e38f8fc8954a)
 
-### Step 5 : Установка Deep Fake Roop
+
+### Step 5 : Установка Deep Fake Roop для запуска на CPU
 
 https://github.com/s0md3v/roop основной репозиторий
 
+Выполните по очередите эти команды
 
 ```
 
 git clone https://github.com/s0md3v/roop
 
+cd roop
 
-cd roop && pip install -r requirements.txt
+python -m venv venv
+
+cd venv
+
+cd Scripts
+
+activate
+
+cd..
+cd..
+
+pip install -r requirements.txt
 
 ```
 
-**Дла запуска на GPU**
+**Установка Deep Fake Roop для запуска на GPU**
 
 Выполните по очередите эти команды
 
 ```
+git clone https://github.com/s0md3v/roop
+
+cd roop
+
+python -m venv venv
+
+cd venv
+
+cd Scripts
+
+activate
+
+cd..
+cd..
+
+pip install -r requirements.txt
 pip uninstall onnxruntime onnxruntime-gpu
 pip install torch torchvision torchaudio --force-reinstall --index-url https://download.pytorch.org/whl/cu118
 pip install onnxruntime-gpu
@@ -95,7 +125,21 @@ pip install onnxruntime-gpu
 
 **Делаем запуск удобным**
 
-Создайте текстовой файл и назовите его start.bat, измените содержимое с помощью блакнота и добавтье одну из строк ниже. 
+Создайте текстовой файл и назовите его start.bat, со следуюзщим содержимым:
+```
+@echo off
+
+git pull
+
+rem Активируем виртуальную среду
+python -m venv venv
+call venv\Scripts\activate.bat
+
+rem Запускаем файл run.py
+python run.py --keep-frames --keep-fps --gpu
+```
+
+Измените последнюю строку с помощью блакнота чтобы задать желаемые аргументы запуска с GPU или на CPU. 
 
 ```python run.py``` - стандартный запуск
 
@@ -112,7 +156,9 @@ https://github.com/s0md3v/roop/wiki/2.-GPU-Acceleration - как запусти�
 
 ```python run.py --keep-frames --keep-fps --gpu``` - сохранить папку с фреймами и держать фпс не выше 30 запуск на видеокарте
 
-Добавтье ```git pull``` в началле бат файла, если хотите, чтобы программа при запуске обновлялась. 
+```python run.py --keep-frames --keep-fps --gpu --gpu-threads 6``` - --gpu-threads позволяет ограничить потребление видеокарты, значение 6 - потребляет примерно 8 Gb, --gpu-threads 16 - 20 Gb.
+
+Добавтье ```git pull``` в началле бат файла, если хотите, чтобы программа при запуске обновлялась автоматически. 
 
 **Улучшаем качество ДипФейков**
 
