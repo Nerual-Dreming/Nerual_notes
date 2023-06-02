@@ -8,7 +8,7 @@ Google Colab для запуска бесплатно и онлайн : https://
 
 
 
-## Подготовка
+## Подготовка к запуск локально
 
 ### Шаг 1 : Python
 https://www.python.org/downloads/
