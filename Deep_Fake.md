@@ -78,6 +78,19 @@ cd roop && pip install -r requirements.txt
 
 ```
 
+**Дла запуска на GPU**
+
+Выполните по очередите эти команды
+
+```
+pip uninstall onnxruntime onnxruntime-gpu
+pip install torch torchvision torchaudio --force-reinstall --index-url https://download.pytorch.org/whl/cu118
+pip install onnxruntime-gpu
+
+```
+
+
+
 Скачайте файл модели и положите в корень папки : https://huggingface.co/MonsterMMORPG/SECourses/resolve/main/inswapper_128.onnx
 
 **Делаем запуск удобным**
