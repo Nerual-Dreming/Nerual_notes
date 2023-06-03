@@ -1,7 +1,6 @@
 # Простой способ сделать Deep Fake Видео в 1 клик. 
 
-**ВИДЕО ГАЙД - https://youtu.be/87Xw2DM0ROI
-**
+**ВИДЕО ГАЙД - https://youtu.be/87Xw2DM0ROI**
 
 ## Colab
 Google Colab для запуска бесплатно и онлайн : https://colab.research.google.com/github/FurkanGozukara/Stable-Diffusion/blob/main/ColabNotebooks/1_click_deep_fake_for_free_by_SECourses.ipynb
