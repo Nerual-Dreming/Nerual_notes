@@ -120,7 +120,7 @@ pip install onnxruntime-gpu
 
 
 
-Скачайте файл модели и положите в корень папки : https://huggingface.co/MonsterMMORPG/SECourses/resolve/main/inswapper_128.onnx
+Скачайте файл модели и положите в корень папки : [https://huggingface.co/MonsterMMORPG/SECourses/resolve/main/inswapper_128.onnx](https://huggingface.co/ezioruan/inswapper_128.onnx/resolve/main/inswapper_128.onnx)
 
 **Делаем запуск удобным**
 
